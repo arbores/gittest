@@ -39,6 +39,7 @@ def in_two_circle_num(c1: Circle, c2: Circle) -> int:
     >>> in_two_circle_num(Circle(0, 1, 6), Circle(3, 2, 3))
     28
     """
+
     xs = range(max(c1.x - c1.r, c2.x - c2.r), min(c1.x + c1.r, c2.x + c2.r) + 1)
     ys = range(max(c1.y - c1.r, c2.y - c2.r), min(c1.y + c1.r, c2.y + c2.r) + 1)
     pos_seq = (Position(i, j) for i in xs for j in ys)
